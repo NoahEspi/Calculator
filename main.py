@@ -62,23 +62,20 @@ while not off:
     # FACTORIAL HERE !!!!!!!!!!!!!
     factCount = userInput.count('!');
     
-    
-
     for i in range(factCount):
 
       factNum = [];
 
       userInputSplit = functions.split(userInput);
 
-      numLength = 0
-
       factLoc = userInputSplit.index('!');
 
+      originalFactLoc = factLoc
+
       while True:
-        if factLoc != 0:
-          factLoc -= 1
-        else:
-          break
+        
+        factLoc -= 1
+        
 
         item = userInputSplit[factLoc]
 
@@ -87,31 +84,19 @@ while not off:
 
         else:
           factNum.insert(0,item)
-          #userInputSplit.remove('!')
-          numLength += 1
 
-          # this is where github would be helpful haha
-          
-          #userInputSplit.pop(factLoc);
+        if factLoc == -1:
+          break
 
 
-
-      print(factNum)
-      
       factNum = ''.join(factNum);
       calcdNum = factorial(int(factNum));
-      print(f"factorial: {calcdNum}")
 
       userInput = ''.join(userInputSplit)
-      print(factLoc)
 
-      print(factLoc)
 
-      userInput = userInput[0:factLoc] + str(calcdNum) + userInput[factLoc+numLength:]
+      userInput = userInput[0:factLoc+1] + str(calcdNum) + userInput[originalFactLoc+1:]
 
-      print(f"userInput: {userInput}");
-
-      
       
 
 
