@@ -51,6 +51,76 @@ while not off:
     clearing = functions.clear(clearing);
     
 
+
+
+
+
+
+    
+    
+  if '!' in userInput:
+    # FACTORIAL HERE !!!!!!!!!!!!!
+    factCount = userInput.count('!');
+    
+    
+
+    for i in range(factCount):
+
+      factNum = [];
+
+      userInputSplit = functions.split(userInput);
+
+      numLength = 0
+
+      factLoc = userInputSplit.index('!');
+
+      while True:
+        if factLoc != 0:
+          factLoc -= 1
+        else:
+          break
+
+        item = userInputSplit[factLoc]
+
+        if not item in '1234567890.':
+          break
+
+        else:
+          factNum.insert(0,item)
+          #userInputSplit.remove('!')
+          numLength += 1
+
+          # this is where github would be helpful haha
+          
+          #userInputSplit.pop(factLoc);
+
+
+
+      print(factNum)
+      
+      factNum = ''.join(factNum);
+      calcdNum = factorial(int(factNum));
+      print(f"factorial: {calcdNum}")
+
+      userInput = ''.join(userInputSplit)
+      print(factLoc)
+
+      print(factLoc)
+
+      userInput = userInput[0:factLoc] + str(calcdNum) + userInput[factLoc+numLength:]
+
+      print(f"userInput: {userInput}");
+
+      
+      
+
+
+
+
+
+
+
+
   #ans function
   if 'ans' in userInput.lower():
     
