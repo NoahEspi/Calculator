@@ -22,7 +22,7 @@ while not off:
 
   # takes input from user and makes sure no error occurs when they input "ctrl + c"
   try:
-    userInput = input("");
+    userInput = input("").lower();
   except KeyboardInterrupt:
     userInput = "off";
 
