@@ -4,6 +4,7 @@ import warnings; from warnings import *
 import functions;
 import time;
 import os;
+
 from getkey import getkey, keys;
 
 print("Welcome to calculator. For a list of functions, type 'help'\n\n");
@@ -22,7 +23,7 @@ while not off:
 
   # takes input from user and makes sure no error occurs when they input "ctrl + c"
   try:
-    userInput = input("");
+    userInput = input("").lower();
   except KeyboardInterrupt:
     userInput = "off";
 
