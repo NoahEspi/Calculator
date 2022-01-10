@@ -86,7 +86,7 @@ Math functions:
  ** → exponent
  % → returns the remainder of a division problem
  ans → returns answer to previous equation
- pi → returns pi to 16 digits
+ pi → returns pi
  e → returns Euler's number
  tan(number) → returns tangent of 'number'
  cos(number) → returns cosine of 'number' 
