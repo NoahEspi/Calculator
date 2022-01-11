@@ -85,19 +85,23 @@ while not off:
         else:
           factNum.insert(0,item)
 
-        if factLoc == -1:
+        if factLoc == 0:
           break
 
 
       factNum = ''.join(factNum);
+
       calcdNum = factorial(int(factNum));
 
       userInput = ''.join(userInputSplit)
 
-
-      userInput = userInput[0:factLoc+1] + str(calcdNum) + userInput[originalFactLoc+1:]
-
+      if factLoc == 0:
+        userInput = userInput[1:factLoc+1] + str(calcdNum) + userInput[originalFactLoc+1:]
+      else:
+        userInput = userInput[0:factLoc+1] + str(calcdNum) + userInput[originalFactLoc+1:]
       
+
+         
 
 
 
