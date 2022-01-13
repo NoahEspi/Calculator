@@ -5,6 +5,7 @@ import functions;
 import time;
 import os;
 from getkey import getkey, keys;
+from math_functions import *
 
 print("Welcome to calculator. For a list of functions, type 'help'\n\n");
 
